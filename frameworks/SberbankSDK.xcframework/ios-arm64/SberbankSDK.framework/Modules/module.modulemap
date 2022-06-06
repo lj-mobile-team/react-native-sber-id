@@ -1,0 +1,4 @@
+framework module SberbankSDK {
+  header "SberbankSDK-Swift.h"
+  requires objc
+}

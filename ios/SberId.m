@@ -69,7 +69,7 @@ RCT_EXPORT_METHOD(getAuthToken:(NSDictionary *)options
     request.codeChallenge = challenge;
     request.codeChallengeMethod = SBKAuthRequest.challengeMethod;
     
-    [SBKAuthManager authWithSberId:request];
+    [SBKAuthManager authWithSberId:request viewController:NULL];
 }
 
 @end

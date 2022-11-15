@@ -125,7 +125,7 @@ def kotlin_version = getExtOrDefault('kotlinVersion')
 
 dependencies {
   // noinspection GradleDynamicVersion
-  implementation('io.github.sberid:SberIdSDK:1.4.4')
+  implementation('io.github.sberid:SberIdSDK:2.0.0')
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation("androidx.annotation:annotation:1.1.0")

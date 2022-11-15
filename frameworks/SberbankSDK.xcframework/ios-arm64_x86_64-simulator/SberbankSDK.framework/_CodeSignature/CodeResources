@@ -6,31 +6,31 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		1XuBd9WRSv3h7sNKkUMfq7s7YTc=
+		UxK1wWSKz+BNjX9HbojW8ZfgJng=
 		</data>
 		<key>Headers/SberbankSDK-Swift.h</key>
 		<data>
-		IC3TOhQIOwcHPSZ2giPMNXbRc2o=
+		i2PpiQmwS40gqIGQTWLJtLWe9xA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DVjYEWCpBz2SUOYFZmMq3/dA8Qg=
+		xqFWH9HHT+IPdbpPwkkyD10Y1io=
 		</data>
 		<key>MPAnalyticsDataModel.momd/MPAnalyticsDataModel.mom</key>
 		<data>
-		cmt52YrnAmk3rpdedX3aUtmK5T8=
+		lHnL4sRkABsogiIsFzmn3dk+qmc=
 		</data>
 		<key>MPAnalyticsDataModel.momd/MPAnalyticsDataModel_2.mom</key>
 		<data>
-		hXS1EAeHQB2rK4t6/2QUoiMAcWM=
+		yhTrNPUkt/qvYOSpmuuRacvspzk=
 		</data>
 		<key>MPAnalyticsDataModel.momd/MPAnalyticsDataModel_3.mom</key>
 		<data>
-		Mbq8++0UwnWlsN6EBwHmgY/ecS8=
+		yzNgPfWEk2twBS0QEzsK5K38/0c=
 		</data>
 		<key>MPAnalyticsDataModel.momd/MPAnalyticsDataModel_4.mom</key>
 		<data>
-		kAh2HZz+7VUuZx85YT4FTcvBtHE=
+		82m7YcVWvO48ghtfwb2rbr41d8k=
 		</data>
 		<key>MPAnalyticsDataModel.momd/MPAnalyticsDataModel_4.omo</key>
 		<data>
@@ -42,51 +42,27 @@
 		</data>
 		<key>Modules/SberbankSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SFPeLqrNVCKwpX14q3G9EkYiyRw=
+		H1KbZuxM+b+291SRY0BpbahTzIY=
 		</data>
 		<key>Modules/SberbankSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		GQISLPqM8I3G1x/JNbYnQaAzXHw=
+		KmSKUAQ2lgrodmrGvqnL4kWJf4s=
 		</data>
 		<key>Modules/SberbankSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ltYxB5fQ/I6sUF86Yr8aEOmhSjI=
-		</data>
-		<key>Modules/SberbankSDK.swiftmodule/arm64.swiftdoc</key>
-		<data>
-		SFPeLqrNVCKwpX14q3G9EkYiyRw=
-		</data>
-		<key>Modules/SberbankSDK.swiftmodule/arm64.swiftinterface</key>
-		<data>
-		GQISLPqM8I3G1x/JNbYnQaAzXHw=
-		</data>
-		<key>Modules/SberbankSDK.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		ltYxB5fQ/I6sUF86Yr8aEOmhSjI=
+		aoSrC4kWp6Rkd9+gvlNXQJDXwpo=
 		</data>
 		<key>Modules/SberbankSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		T1QmgbOsoRCmzgBnvk7S04CVMFk=
+		AhyIDN8k6fpJaAfPh9ryCsC5Kao=
 		</data>
 		<key>Modules/SberbankSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Fm+hLT2CvgLtsPX0/fPHElAjwmE=
+		I8qzq0SCqrfZV61aGnqxX2p84Do=
 		</data>
 		<key>Modules/SberbankSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		nVKzvIF8BwuPTTRpjOE/WjF2q9s=
-		</data>
-		<key>Modules/SberbankSDK.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		T1QmgbOsoRCmzgBnvk7S04CVMFk=
-		</data>
-		<key>Modules/SberbankSDK.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		Fm+hLT2CvgLtsPX0/fPHElAjwmE=
-		</data>
-		<key>Modules/SberbankSDK.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		nVKzvIF8BwuPTTRpjOE/WjF2q9s=
+		gUXIPaonYTjvwjPeuN4p2bCV+Pw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -117,42 +93,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OYqVJVZE7mYbUEeRi0Ey2TQVY8+v8pPktK009qxYBqU=
+			FvosD4RqLE4L2S6ELFZc4jGvcA4zmEHi8mhoGblgniU=
 			</data>
 		</dict>
 		<key>Headers/SberbankSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y4WHXAmsVBGw44BaPzc3NwVSP9qA/M9v9on8M6HGgFM=
+			2eKUSrO2IkRetQrXF26Ov1JqsR2I9ffbE/ExsCUEq2k=
 			</data>
 		</dict>
 		<key>MPAnalyticsDataModel.momd/MPAnalyticsDataModel.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kiWe+PaFcQNreQ8BkawxtUWmrAkV5PLvFT2qUi6G/ns=
+			oFYVif48sI7F8ZC9/tzdkDN3Q/+azeY+6eux4gri5+8=
 			</data>
 		</dict>
 		<key>MPAnalyticsDataModel.momd/MPAnalyticsDataModel_2.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XtbTuINYmRkngY7A3/wPrBYtlJdCfm7VF2qEG1jKS2Q=
+			5qf6Vg6yLr8i5R5OlF+L27adeuEwpcJsVxnWD7MM1DQ=
 			</data>
 		</dict>
 		<key>MPAnalyticsDataModel.momd/MPAnalyticsDataModel_3.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3EMpV9QMtsgeHno2JaEwdk5kU3P19XYSgM9Z4kDUK88=
+			JpDcuEiQKAIgaBozxXHAk5ztTDVFPtLnDEyeZhnkUUc=
 			</data>
 		</dict>
 		<key>MPAnalyticsDataModel.momd/MPAnalyticsDataModel_4.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fN+EhNppPAeZkpxB2C1B0YtdOo1lUz0zmKmv9nptHvw=
+			6Eue6+Q7wAf6UKASGBDC46AqpUaw/8jdKrAcwBLUtow=
 			</data>
 		</dict>
 		<key>MPAnalyticsDataModel.momd/MPAnalyticsDataModel_4.omo</key>
@@ -173,84 +149,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			avNxrdXYQLQwHppbu2FomzocZxvVzzX0R+GvvvwQKD8=
+			Y0kTRcpQfFrez6toNjR+6rxVaLCDYJs6/Hm7Uxl+qd8=
 			</data>
 		</dict>
 		<key>Modules/SberbankSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4tpLgRVN7yB0R5ZfBWO2cqgyLc26cAamAYHSovTAWUw=
+			DSRLVSIM03WVJmB6Ml1k7AIkcfmxeZYrQu3BocxY5S4=
 			</data>
 		</dict>
 		<key>Modules/SberbankSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7EXYCfW8MznrhT2TP01fKFvroDgWdYV85iHftghnR9w=
-			</data>
-		</dict>
-		<key>Modules/SberbankSDK.swiftmodule/arm64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			avNxrdXYQLQwHppbu2FomzocZxvVzzX0R+GvvvwQKD8=
-			</data>
-		</dict>
-		<key>Modules/SberbankSDK.swiftmodule/arm64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4tpLgRVN7yB0R5ZfBWO2cqgyLc26cAamAYHSovTAWUw=
-			</data>
-		</dict>
-		<key>Modules/SberbankSDK.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7EXYCfW8MznrhT2TP01fKFvroDgWdYV85iHftghnR9w=
+			6odw7KydHuX8vVqp4Z3CBPlBKXPrc6Inz0dP0QxXaUQ=
 			</data>
 		</dict>
 		<key>Modules/SberbankSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MbQj2QUSK1AOHcwYSPKu3plqaAn+lRUy/fOFo0JhcFA=
+			GsL3QANpUAGcC3JFNMXBm173gUdmU/Z5UgbdXXMv92c=
 			</data>
 		</dict>
 		<key>Modules/SberbankSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1hr6jh3d5jA0NORxA81yej2FcB14isTVyBwACoHUAWs=
+			zIg9kcUKRT4xbJmHCRBEyTsQls4jeL6/VtOpeGqfLJo=
 			</data>
 		</dict>
 		<key>Modules/SberbankSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lcaxGtLURSDzi+f7Xz52m/Oez7llUb7nxaqfE9JPmQY=
-			</data>
-		</dict>
-		<key>Modules/SberbankSDK.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MbQj2QUSK1AOHcwYSPKu3plqaAn+lRUy/fOFo0JhcFA=
-			</data>
-		</dict>
-		<key>Modules/SberbankSDK.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1hr6jh3d5jA0NORxA81yej2FcB14isTVyBwACoHUAWs=
-			</data>
-		</dict>
-		<key>Modules/SberbankSDK.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			lcaxGtLURSDzi+f7Xz52m/Oez7llUb7nxaqfE9JPmQY=
+			JxvLnfs0KcABmDJOvO+hT+LfznLX9O9T2YO1RL2XOn0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -1,82 +1,90 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
-// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name SberbankSDK
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SberbankSDK
 import CommonCrypto
 import Foundation
 import MPAnalytics
 import SafariServices
 import Swift
 import UIKit
+import _Concurrency
 @_inheritsConvenienceInitializers @objc final public class SBKAuthManager : ObjectiveC.NSObject {
-  public static var navigationController: UIKit.UINavigationController?
-  @objc public static func auth(withSberId request: SberbankSDK.SBKAuthRequest)
-  @objc public static func soleLoginWebPageAuth(sberIdRequest request: SberbankSDK.SBKAuthRequest, svcRedirectUrlString: Swift.String) -> Swift.Bool
+  @objc public static func auth(withSberId request: SberbankSDK.SBKAuthRequest, viewController: UIKit.UIViewController?)
+  @objc public static func soleLoginWebPageAuth(sberIdRequest request: SberbankSDK.SBKAuthRequest, svcRedirectUrlString: Swift.String, viewController: UIKit.UIViewController) -> Swift.Bool
   @objc public static func getResponseFrom(_ url: Foundation.URL, completion: (SberbankSDK.SBKAuthResponse) -> Swift.Void)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
-public var SBKUtilsCodeChallengeMethod: Swift.String
+public let SBKUtilsCodeChallengeMethod: Swift.String
 @_inheritsConvenienceInitializers @objc final public class SBKUtils : ObjectiveC.NSObject {
   @objc public static func createVerifier() -> Swift.String
   @objc public static func createChallenge(_ verifier: Swift.String) -> Swift.String
   @objc public static func getSSOUrlStringFrom(_ url: Foundation.URL?) -> Swift.String?
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class SBKLoginButton : UIKit.UIButton {
-  @objc public convenience init(type: SberbankSDK.LoginButtonStyle, textType: SberbankSDK.LoginButtonTextType, desiredHeight: CoreGraphics.CGFloat, desiredWidth: CoreGraphics.CGFloat)
-  @objc final public func setBorderColor(_ color: UIKit.UIColor)
-  @objc public convenience init(type: SberbankSDK.LoginButtonStyle)
-  @objc final public func setCornerRadius(_ radiusStyle: SberbankSDK.CornerRadiusStyle)
-  @objc override final public func sendAction(_ action: ObjectiveC.Selector, to target: Any?, for event: UIKit.UIEvent?)
-  final public func attemptToPersonalize() -> Swift.Bool
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) final public class SBKLoginButton : UIKit.UIButton {
+  @objc @_Concurrency.MainActor(unsafe) final public var isLoaderHidden: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) convenience public init(type: SberbankSDK.LoginButtonStyle, clientId: Swift.String, observer: SberbankSDK.LoginButtonObserverProtocol? = nil)
+  @objc @_Concurrency.MainActor(unsafe) convenience public init(type: SberbankSDK.LoginButtonStyle, textType: SberbankSDK.LoginButtonTextType, clientId: Swift.String, desiredSize: CoreGraphics.CGSize, observer: SberbankSDK.LoginButtonObserverProtocol? = nil)
+  @objc @_Concurrency.MainActor(unsafe) final public func setBorderColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) final public func setCornerRadius(_ radiusStyle: SberbankSDK.CornerRadiusStyle)
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) final public func attemptToPersonalize() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override final public func sendAction(_ action: ObjectiveC.Selector, to target: Any?, for event: UIKit.UIEvent?)
   @objc deinit
 }
 public enum SberbankSDKError : Swift.Error {
   case unknownError
   public static func == (a: SberbankSDK.SberbankSDKError, b: SberbankSDK.SberbankSDKError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
-extension SberbankSDKError : Foundation.LocalizedError {
+extension SberbankSDK.SberbankSDKError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
 }
+@objc public protocol LoginButtonObserverProtocol {
+  @objc func loginButtonWasHidden()
+}
 @objc public enum LoginButtonStyle : Swift.Int {
-  case green = 0
+  case green
   case white
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
 @objc public enum LoginButtonTextType : Swift.Int {
-  case short = 0
+  case short
   case general
   case filling
   case pursue
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
 @objc public enum CornerRadiusStyle : Swift.Int {
-  case no = 0
+  case no
   case normal
   case max
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
 @objc @_inheritsConvenienceInitializers @objcMembers final public class SBKAuthRequest : ObjectiveC.NSObject {
-  @objc public static var challengeMethod: Swift.String
+  @objc public static let challengeMethod: Swift.String
   @objc final public var clientId: Swift.String
   @objc final public var scope: Swift.String
   @objc final public var state: Swift.String
@@ -106,5 +114,15 @@ extension SberbankSDKError : Foundation.LocalizedError {
     get
   }
   @objc deinit
-  @objc override dynamic public init()
 }
+extension SberbankSDK.SberbankSDKError : Swift.Equatable {}
+extension SberbankSDK.SberbankSDKError : Swift.Hashable {}
+extension SberbankSDK.LoginButtonStyle : Swift.Equatable {}
+extension SberbankSDK.LoginButtonStyle : Swift.Hashable {}
+extension SberbankSDK.LoginButtonStyle : Swift.RawRepresentable {}
+extension SberbankSDK.LoginButtonTextType : Swift.Equatable {}
+extension SberbankSDK.LoginButtonTextType : Swift.Hashable {}
+extension SberbankSDK.LoginButtonTextType : Swift.RawRepresentable {}
+extension SberbankSDK.CornerRadiusStyle : Swift.Equatable {}
+extension SberbankSDK.CornerRadiusStyle : Swift.Hashable {}
+extension SberbankSDK.CornerRadiusStyle : Swift.RawRepresentable {}

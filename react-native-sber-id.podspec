@@ -19,4 +19,5 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'frameworks/SberbankSDK.xcframework', 'frameworks/MPAnalytics.xcframework'
 
   s.dependency "React"
+  s.dependency 'YandexMobileMetrica', '4.4.0'
 end

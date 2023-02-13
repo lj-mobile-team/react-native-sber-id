@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SberbankSDK
 import CommonCrypto
 import Foundation
@@ -7,36 +7,13 @@ import MPAnalytics
 import SafariServices
 import Swift
 import UIKit
-import YandexMobileMetrica
 import _Concurrency
-@objc public enum LoginButtonStyle : Swift.Int {
-  case green
-  case white
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 @_inheritsConvenienceInitializers @objc final public class SBKAuthManager : ObjectiveC.NSObject {
   @objc public static func auth(withSberId request: SberbankSDK.SBKAuthRequest, viewController: UIKit.UIViewController?)
   @objc public static func soleLoginWebPageAuth(sberIdRequest request: SberbankSDK.SBKAuthRequest, svcRedirectUrlString: Swift.String, viewController: UIKit.UIViewController) -> Swift.Bool
   @objc public static func getResponseFrom(_ url: Foundation.URL, completion: (SberbankSDK.SBKAuthResponse) -> Swift.Void)
-  @objc public static func sendOtherAuth(serviceName: Swift.String, isSuccess: SberbankSDK.SBKTrinity, userStatus: SberbankSDK.SBKTrinity)
-  @objc public static func sendOtherAuth(service: SberbankSDK.AuthServiceType, isSuccess: SberbankSDK.SBKTrinity, isUserNew: SberbankSDK.SBKTrinity)
   @objc override dynamic public init()
   @objc deinit
-}
-@objc public enum LoginButtonTextType : Swift.Int {
-  case short
-  case general
-  case filling
-  case pursue
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
 }
 public let SBKUtilsCodeChallengeMethod: Swift.String
 @_inheritsConvenienceInitializers @objc final public class SBKUtils : ObjectiveC.NSObject {
@@ -60,25 +37,6 @@ public let SBKUtilsCodeChallengeMethod: Swift.String
   @_Concurrency.MainActor(unsafe) @objc override final public func sendAction(_ action: ObjectiveC.Selector, to target: Any?, for event: UIKit.UIEvent?)
   @objc deinit
 }
-@objc public enum AuthServiceType : Swift.Int {
-  case yandex
-  case google
-  case apple
-  case facebook
-  case vk
-  case ok
-  case avito
-  case instagram
-  case gosUslugi
-  case mailRu
-  case myMoscow
-  case local
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 public enum SberbankSDKError : Swift.Error {
   case unknownError
   public static func == (a: SberbankSDK.SberbankSDKError, b: SberbankSDK.SberbankSDKError) -> Swift.Bool
@@ -92,18 +50,38 @@ extension SberbankSDK.SberbankSDKError : Foundation.LocalizedError {
     get
   }
 }
-@objc public enum SBKTrinity : Swift.Int {
-  case `true`
-  case `false`
-  case unknown
+@objc public protocol LoginButtonObserverProtocol {
+  @objc func loginButtonWasHidden()
+}
+@objc public enum LoginButtonStyle : Swift.Int {
+  case green
+  case white
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
-@objc public protocol LoginButtonObserverProtocol {
-  @objc func loginButtonWasHidden()
+@objc public enum LoginButtonTextType : Swift.Int {
+  case short
+  case general
+  case filling
+  case pursue
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum CornerRadiusStyle : Swift.Int {
+  case no
+  case normal
+  case max
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 @objc @_inheritsConvenienceInitializers @objcMembers final public class SBKAuthRequest : ObjectiveC.NSObject {
   @objc public static let challengeMethod: Swift.String
@@ -118,16 +96,6 @@ extension SberbankSDK.SberbankSDKError : Foundation.LocalizedError {
   @objc public init(clientId: Swift.String, scope: Swift.String, state: Swift.String, nonce: Swift.String, ssoBaseUrl: Swift.String?, redirectUri: Swift.String, codeChallenge: Swift.String?, codeChallengeMethod: Swift.String?)
   @objc override dynamic public init()
   @objc deinit
-}
-@objc public enum CornerRadiusStyle : Swift.Int {
-  case no
-  case normal
-  case max
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers final public class SBKAuthResponse : ObjectiveC.NSObject {
   @objc final public var nonce: Swift.String {
@@ -147,20 +115,14 @@ extension SberbankSDK.SberbankSDKError : Foundation.LocalizedError {
   }
   @objc deinit
 }
+extension SberbankSDK.SberbankSDKError : Swift.Equatable {}
+extension SberbankSDK.SberbankSDKError : Swift.Hashable {}
 extension SberbankSDK.LoginButtonStyle : Swift.Equatable {}
 extension SberbankSDK.LoginButtonStyle : Swift.Hashable {}
 extension SberbankSDK.LoginButtonStyle : Swift.RawRepresentable {}
 extension SberbankSDK.LoginButtonTextType : Swift.Equatable {}
 extension SberbankSDK.LoginButtonTextType : Swift.Hashable {}
 extension SberbankSDK.LoginButtonTextType : Swift.RawRepresentable {}
-extension SberbankSDK.AuthServiceType : Swift.Equatable {}
-extension SberbankSDK.AuthServiceType : Swift.Hashable {}
-extension SberbankSDK.AuthServiceType : Swift.RawRepresentable {}
-extension SberbankSDK.SberbankSDKError : Swift.Equatable {}
-extension SberbankSDK.SberbankSDKError : Swift.Hashable {}
-extension SberbankSDK.SBKTrinity : Swift.Equatable {}
-extension SberbankSDK.SBKTrinity : Swift.Hashable {}
-extension SberbankSDK.SBKTrinity : Swift.RawRepresentable {}
 extension SberbankSDK.CornerRadiusStyle : Swift.Equatable {}
 extension SberbankSDK.CornerRadiusStyle : Swift.Hashable {}
 extension SberbankSDK.CornerRadiusStyle : Swift.RawRepresentable {}

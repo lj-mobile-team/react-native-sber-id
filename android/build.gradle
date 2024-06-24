@@ -2,16 +2,27 @@ buildscript {
   // Buildscript is evaluated before everything else so we can't use getExtOrDefault
   def kotlin_version = rootProject.ext.has('kotlinVersion') ? rootProject.ext.get('kotlinVersion') : project.properties['SberId_kotlinVersion']
 
-  repositories {
-    google()
-    jcenter()
-  }
+  // repositories {
+  //   google()
+  //   jcenter()
+  // }
 
-  dependencies {
-    classpath 'com.android.tools.build:gradle:4.1.2'
-    // noinspection DifferentKotlinGradleVersion
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-  }
+  // dependencies {
+  //   classpath 'com.android.tools.build:gradle:4.1.2'
+  //   // noinspection DifferentKotlinGradleVersion
+  //   classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+  // }
+
+  if (project == rootProject) {
+      repositories {
+          mavenCentral()
+          google()
+      }
+    
+      dependencies {
+          classpath 'com.android.tools.build:gradle:7.3.0'
+      }
+    }
 }
 
 apply plugin: 'com.android.library'

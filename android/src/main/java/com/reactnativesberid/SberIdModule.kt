@@ -67,11 +67,22 @@ class SberIdModule(private val reactContext: ReactApplicationContext) : ReactCon
 
         codeVerifier = PkceUtils.generateRandomCodeVerifier(SecureRandom())
         val codeChallenge = PkceUtils.deriveCodeVerifierChallenge(codeVerifier)
-        val state = UUID.randomUUID().toString()
-        nonce = UUID.randomUUID().toString()
+        var state = UUID.randomUUID().toString()
         var scope: String = ""
         var clientId: String = ""
         var redirectUri: String = ""
+        
+        try {
+            state = options.getString("state").toString()
+        } catch (exeption: Throwable) {
+            promiseResolver?.reject("INVALID_PARAMS", "state");
+        }
+
+        try {
+            nonce = options.getString("nonce").toString()
+        } catch (exeption: Throwable) {
+            promiseResolver?.reject("INVALID_PARAMS", "nonce");
+        }
 
         try {
             scope = options.getString("scope").toString()
